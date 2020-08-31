@@ -26,11 +26,11 @@ public:
 	}
 	int CustomerEntry()
 	{
-		cout << "Lütfen kullanýcý adý ve þifrenizi belirleyiniz." << endl;
+		cout << "LÃ¼tfen kullanÃ½cÃ½ adÃ½ ve Ã¾ifrenizi belirleyiniz." << endl;
 	again:
-		cout << "Kullanýcý Adý :";
+		cout << "KullanÃ½cÃ½ AdÃ½ :";
 		cin >> kullaniciadi;
-		cout << "Þifre :";
+		cout << "Ãžifre :";
 		cin >> sifre;
 		string active = "aktif";
 		if (CustomerRecordCheck(kullaniciadi) == 0)
@@ -51,7 +51,7 @@ public:
 		}
 		else
 		{
-			cout << "Girdiðiniz kullanýcý adý daha önceden alýnmýþtýr." << endl;
+			cout << "GirdiÃ°iniz kullanÃ½cÃ½ adÃ½ daha Ã¶nceden alÃ½nmÃ½Ã¾tÃ½r." << endl;
 			goto again;
 		}
 	}
@@ -59,9 +59,9 @@ public:
 	{
 		int kuid = 0, account = 0, status = 0, sum = 0;
 		string kuadi = "", kusifre = "", aktivite = "", active = "aktif", inactive = "inaktif", kadi, sif;
-		cout << "Kullanýcý Adý :";
+		cout << "KullanÃ½cÃ½ AdÃ½ :";
 		cin >> kadi;
-		cout << "Þifre :";
+		cout << "Ãžifre :";
 		cin >> sif;
 		ifstream customerloginfile("CustomerEntry.txt");
 		if (customerloginfile.is_open())
@@ -151,7 +151,7 @@ public:
 		string changeuser = "", changepass = "", changeactive = "";
 		fstream ChangeP;
 		ofstream Temp;
-		cout << "Yeni þifrenizi giriniz :";
+		cout << "Yeni Ã¾ifrenizi giriniz :";
 		cin >> NewPassword;
 		ChangeP.open("CustomerEntry.txt", ios::in);
 		Temp.open("temp.txt", ios::out);
@@ -215,7 +215,7 @@ private:
 	void ErrorActions()
 	{
 		system("cls");
-		cout << "Dosya açma hatasý.Kapatýlýyor...";
+		cout << "Dosya aÃ§ma hatasÃ½.KapatÃ½lÃ½yor...";
 		Sleep(2500);
 		exit(0);
 	}
@@ -241,26 +241,26 @@ public:
 	int WorkerEntry()
 	{
 		string workerkadi, workersif, activetype = "aktif", authority = "";
-		cout << "Lütfen çalýþan kiþi için kullanýcý adý ve þifre belirleyiniz." << endl;
+		cout << "LÃ¼tfen Ã§alÃ½Ã¾an kiÃ¾i iÃ§in kullanÃ½cÃ½ adÃ½ ve Ã¾ifre belirleyiniz." << endl;
 	workerentry:
-		cout << "Kullanýcý Adý :";
+		cout << "KullanÃ½cÃ½ AdÃ½ :";
 		cin >> workerkadi;
 		setname(workerkadi);
-		cout << "Þifre :";
+		cout << "Ãžifre :";
 		cin >> workersif;
 		setpass(workersif);
 	againauthsecim:
-		cout << "Lütfen yetki türü seçiniz." << endl;
-		cout << "1-Tam\n2-Yarý" << endl;
-		cout << "Seçiminiz :";
+		cout << "LÃ¼tfen yetki tÃ¼rÃ¼ seÃ§iniz." << endl;
+		cout << "1-Tam\n2-YarÃ½" << endl;
+		cout << "SeÃ§iminiz :";
 		cin >> authsecim;
 		switch (authsecim)
 		{
 		case '1':authority = "tam";
 			break;
-		case '2':authority = "yarý";
+		case '2':authority = "yarÃ½";
 			break;
-		default:cout << "Hatalý seçim yaptýnýz tekrar deneyin.";
+		default:cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z tekrar deneyin.";
 			goto againauthsecim;
 			break;
 		}
@@ -285,14 +285,14 @@ public:
 			else
 			{
 				system("cls");
-				cout << "Girmiþ olduðunuz kullanýcý adý daha önceden alýnmýþtýr." << endl;
+				cout << "GirmiÃ¾ olduÃ°unuz kullanÃ½cÃ½ adÃ½ daha Ã¶nceden alÃ½nmÃ½Ã¾tÃ½r." << endl;
 				goto workerentry;
 			}
 		}
 		else
 		{
 			system("cls");
-			cout << "Oluþturmaya çalýþtýðýnýz yetki sizin yetkinizden düþük olduðu için hesap oluþturulamadý." << endl;
+			cout << "OluÃ¾turmaya Ã§alÃ½Ã¾tÃ½Ã°Ã½nÃ½z yetki sizin yetkinizden dÃ¼Ã¾Ã¼k olduÃ°u iÃ§in hesap oluÃ¾turulamadÃ½." << endl;
 			goto workerentry;
 		}
 	}
@@ -300,9 +300,9 @@ public:
 	{
 		int waccount = 0, status = 0, sum = 0;
 		string wkadi, wsif, active = "aktif";
-		cout << "Kullanýcý Adý :";
+		cout << "KullanÃ½cÃ½ AdÃ½ :";
 		cin >> wkadi;
-		cout << "Þifre :";
+		cout << "Ãžifre :";
 		cin >> wsif;
 		ifstream WorkerLoginFile("WorkerEntry.txt");
 		if (WorkerLoginFile.is_open())
@@ -391,7 +391,7 @@ public:
 		string wchangeuser = "", wchangepass = "", wauth = "", wchangeactive = "";
 		fstream WorkerP;
 		ofstream Temp;
-		cout << "Yeni þifrenizi giriniz :";
+		cout << "Yeni Ã¾ifrenizi giriniz :";
 		cin >> NewPassword;
 		WorkerP.open("WorkerEntry.txt", ios::in);
 		Temp.open("temp.txt", ios::out);
@@ -442,7 +442,7 @@ private:
 			while (!Control.eof())
 			{
 				Control >> id >> workername >> workerpass >> workerauth >> workeractive;
-				if (personauth == auth || personauth == "tam" && auth == "yarý")
+				if (personauth == auth || personauth == "tam" && auth == "yarÃ½")
 				{
 					return 1;
 				}
@@ -499,7 +499,7 @@ private:
 	void ErrorActions()
 	{
 		system("cls");
-		cout << "Dosya açma hatasý.Kapatýlýyor...";
+		cout << "Dosya aÃ§ma hatasÃ½.KapatÃ½lÃ½yor...";
 		Sleep(2500);
 		exit(0);
 	}
@@ -509,7 +509,7 @@ class Expeditions
 public:
 	Worker w;
 	string loc1, loc2, date, time; int price, id, scheme;
-	const string Citys[81] = { "Adana", "Adýyaman", "Afyon","Aðrý", "Amasya", "Ankara", "Antalya", "Artvin", "Aydýn", "Balýkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankýrý", "Çorum", "Denizli", "Diyarbakýr", "Edirne", "Elazýð", "Erzincan", "Erzurum", "Eskiþehir", "Gaziantep", "Giresun", "Gümüþhane", "Hakkari", "Hatay", "Isparta", "Mersin", "Ýstanbul", "Ýzmir", "Kars", "Kastamonu", "Kayseri", "Kýrklareli", "Kýrþehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraþ", "Mardin", "Muðla", "Muþ", "Nevþehir", "Niðde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdað", "Tokat", "Trabzon", "Tunceli", "Þanlýurfa", "Uþak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt","Karaman", "Kýrýkkale", "Batman", "Þýrnak","Bartýn", "Ardahan", "Iðdýr", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce" };
+	const string Citys[81] = { "Adana", "AdÃ½yaman", "Afyon","AÃ°rÃ½", "Amasya", "Ankara", "Antalya", "Artvin", "AydÃ½n", "BalÃ½kesir", "Bilecik", "BingÃ¶l", "Bitlis", "Bolu", "Burdur", "Bursa", "Ã‡anakkale", "Ã‡ankÃ½rÃ½", "Ã‡orum", "Denizli", "DiyarbakÃ½r", "Edirne", "ElazÃ½Ã°", "Erzincan", "Erzurum", "EskiÃ¾ehir", "Gaziantep", "Giresun", "GÃ¼mÃ¼Ã¾hane", "Hakkari", "Hatay", "Isparta", "Mersin", "Ãstanbul", "Ãzmir", "Kars", "Kastamonu", "Kayseri", "KÃ½rklareli", "KÃ½rÃ¾ehir", "Kocaeli", "Konya", "KÃ¼tahya", "Malatya", "Manisa", "KahramanmaraÃ¾", "Mardin", "MuÃ°la", "MuÃ¾", "NevÃ¾ehir", "NiÃ°de", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "TekirdaÃ°", "Tokat", "Trabzon", "Tunceli", "ÃžanlÃ½urfa", "UÃ¾ak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt","Karaman", "KÃ½rÃ½kkale", "Batman", "ÃžÃ½rnak","BartÃ½n", "Ardahan", "IÃ°dÃ½r", "Yalova", "KarabÃ¼k", "Kilis", "Osmaniye", "DÃ¼zce" };
 	Expeditions() {
 		loc1 = ""; loc2 = ""; date = ""; time = "";
 		price = 0; id = 0; scheme = 0;
@@ -521,14 +521,14 @@ public:
 		string first, second, date1, time1, id1;
 		int schemeselec;
 	ExpeditionsAGAIN1:
-		cout << "Kalkýþ yerinin plakasýný giriniz :";
+		cout << "KalkÃ½Ã¾ yerinin plakasÃ½nÃ½ giriniz :";
 		cin >> location1;
-		cout << "Varýþ yerinin plakasýný giriniz :";
+		cout << "VarÃ½Ã¾ yerinin plakasÃ½nÃ½ giriniz :";
 		cin >> location2;
 		if (location1 < 1 || location1 > 81 || location1 == 0 && location2 < 1 || location2 > 81 || location2 == 0)
 		{
 			system("cls");
-			cout << "Geçersiz plaka giriþi yaptýnýz.Tekrar seçiniz." << endl;
+			cout << "GeÃ§ersiz plaka giriÃ¾i yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 			goto ExpeditionsAGAIN1;
 		}
 		else
@@ -538,21 +538,21 @@ public:
 			if (first == second)
 			{
 				system("cls");
-				cout << "Kalkýþ ve varýþ yerleri ayný olamaz.Tekrar seçiniz." << endl;
+				cout << "KalkÃ½Ã¾ ve varÃ½Ã¾ yerleri aynÃ½ olamaz.Tekrar seÃ§iniz." << endl;
 				goto ExpeditionsAGAIN1;
 			}
 		ExpeditionsAGAIN2:
-			cout << "Sefer gününü giriniz :";
+			cout << "Sefer gÃ¼nÃ¼nÃ¼ giriniz :";
 			cin >> day;
 			if (day <= 31 && day >= 1)
 			{
 			ExpeditionsAGAIN3:
-				cout << "Sefer ayýný giriniz :";
+				cout << "Sefer ayÃ½nÃ½ giriniz :";
 				cin >> month;
 				if (month <= 12 && month >= 1)
 				{
 				ExpeditionsAGAIN4:
-					cout << "Sefer yýlýnýz giriniz :";
+					cout << "Sefer yÃ½lÃ½nÃ½z giriniz :";
 					cin >> year;
 					if (year >= 2020)
 					{
@@ -560,7 +560,7 @@ public:
 						a << day; b << month; c << year;
 						date1 = a.str() + "." + b.str() + "." + c.str();
 					ExpeditionsAGAIN5:
-						cout << "Sefer saatini giriniz.(Örneðin 17.30) :";
+						cout << "Sefer saatini giriniz.(Ã–rneÃ°in 17.30) :";
 						cin >> time1;
 						stringstream con(time1);
 						con >> when;
@@ -572,9 +572,9 @@ public:
 							if (price1 >= 1)
 							{
 							ExpeditionsAGAIN7:
-								cout << "Koltuk düzeni seçiniz." << endl;
+								cout << "Koltuk dÃ¼zeni seÃ§iniz." << endl;
 								cout << "1-2+2\n2-2+1" << endl;
-								cout << "Seçiminiz :";
+								cout << "SeÃ§iminiz :";
 								cin >> schemeselec;
 								switch (schemeselec)
 								{
@@ -584,7 +584,7 @@ public:
 								case 2:
 									scheme1 = 38;
 									break;
-								default:cout << "Hatalý giriþ yaptýnýz.Tekrar seçiniz." << endl;
+								default:cout << "HatalÃ½ giriÃ¾ yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 									goto ExpeditionsAGAIN7;
 									break;
 								}
@@ -607,37 +607,37 @@ public:
 								else
 								{
 									system("cls");
-									cout << "Oluþturmaya çalýþtýðýnýz sefer halihazýrda mevcuttur.Ýlk kýsma yönlendiriliyorsunuz..." << endl;
+									cout << "OluÃ¾turmaya Ã§alÃ½Ã¾tÃ½Ã°Ã½nÃ½z sefer halihazÃ½rda mevcuttur.Ãlk kÃ½sma yÃ¶nlendiriliyorsunuz..." << endl;
 									goto ExpeditionsAGAIN1;
 								}
 							}
 							else
 							{
-								cout << "Hatalý fiyat girdiniz.Tekrar seçiniz." << endl;
+								cout << "HatalÃ½ fiyat girdiniz.Tekrar seÃ§iniz." << endl;
 								goto ExpeditionsAGAIN6;
 							}
 						}
 						else
 						{
-							cout << "Hatalý saat girdiniz.Tekrar seçiniz." << endl;
+							cout << "HatalÃ½ saat girdiniz.Tekrar seÃ§iniz." << endl;
 							goto ExpeditionsAGAIN5;
 						}
 					}
 					else
 					{
-						cout << "2020 yýlý öncesine sefer oluþturulamaz.Tekrar seçiniz." << endl;
+						cout << "2020 yÃ½lÃ½ Ã¶ncesine sefer oluÃ¾turulamaz.Tekrar seÃ§iniz." << endl;
 						goto ExpeditionsAGAIN4;
 					}
 				}
 				else
 				{
-					cout << "Hatalý ay seçimi yaptýnýz.Tekrar seçiniz." << endl;
+					cout << "HatalÃ½ ay seÃ§imi yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 					goto ExpeditionsAGAIN3;
 				}
 			}
 			else
 			{
-				cout << "Hatalý gün seçimi yaptýnýz.Tekrar seçiniz." << endl;
+				cout << "HatalÃ½ gÃ¼n seÃ§imi yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 				goto ExpeditionsAGAIN2;
 			}
 		}
@@ -661,7 +661,7 @@ public:
 					if (wauth == fullcontrol)
 					{
 						Check.close();
-						cout << "Düzenlemek istediðiniz sefer id bilgisini giriniz :";
+						cout << "DÃ¼zenlemek istediÃ°iniz sefer id bilgisini giriniz :";
 						cin >> sfrid;
 						ifstream ExCheck("ExpeditionEntry.txt");
 						if (ExCheck.is_open())
@@ -674,26 +674,26 @@ public:
 									lone = loc1; ltwo = loc2; locdate = date; loctime = time; locprice = price; locseat = scheme;
 									ExCheck.close();
 								ExpeditionsAGAIN1:
-									cout << "Lütfen düzenlemek istediðiniz kýsmý seçiniz." << endl;
+									cout << "LÃ¼tfen dÃ¼zenlemek istediÃ°iniz kÃ½smÃ½ seÃ§iniz." << endl;
 									cout << "1-Tarih\n2-Saat\n3-Fiyat" << endl;
-									cout << "Seçiminiz :";
+									cout << "SeÃ§iminiz :";
 									cin >> editselec;
 									switch (editselec)
 									{
 									case 1:
 										system("cls");
 									ExpeditionsAGAIN2:
-										cout << "Sefer gününü giriniz :";
+										cout << "Sefer gÃ¼nÃ¼nÃ¼ giriniz :";
 										cin >> day;
 										if (day <= 31 && day >= 1)
 										{
 										ExpeditionsAGAIN3:
-											cout << "Sefer ayýný giriniz :";
+											cout << "Sefer ayÃ½nÃ½ giriniz :";
 											cin >> month;
 											if (month <= 12 && month >= 1)
 											{
 											ExpeditionsAGAIN4:
-												cout << "Sefer yýlýnýz giriniz :";
+												cout << "Sefer yÃ½lÃ½nÃ½z giriniz :";
 												cin >> year;
 												if (year >= 2020)
 												{
@@ -735,7 +735,7 @@ public:
 													else
 													{
 														system("cls");
-														cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+														cout << "AynÃ½ sefer zaten oluÃ¾turulmuÃ¾.Tekrar deneyin." << endl;
 														a.str(""); b.str(""); c.str("");
 														goto ExpeditionsAGAIN1;
 													}
@@ -743,26 +743,26 @@ public:
 												}
 												else
 												{
-													cout << "2020 yýlý öncesine sefer oluþturulamaz.Tekrar seçiniz." << endl;
+													cout << "2020 yÃ½lÃ½ Ã¶ncesine sefer oluÃ¾turulamaz.Tekrar seÃ§iniz." << endl;
 													goto ExpeditionsAGAIN4;
 												}
 											}
 											else
 											{
-												cout << "Hatalý ay seçimi yaptýnýz.Tekrar seçiniz." << endl;
+												cout << "HatalÃ½ ay seÃ§imi yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 												goto ExpeditionsAGAIN3;
 											}
 										}
 										else
 										{
-											cout << "Hatalý gün seçimi yaptýnýz.Tekrar seçiniz." << endl;
+											cout << "HatalÃ½ gÃ¼n seÃ§imi yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 											goto ExpeditionsAGAIN2;
 										}
 										break;
 									case 2:
 										system("cls");
 									ExpeditionsAGAIN5:
-										cout << "Sefer saatini giriniz.(Örneðin 17.30) :";
+										cout << "Sefer saatini giriniz.(Ã–rneÃ°in 17.30) :";
 										cin >> NewTime;
 										con << NewTime;
 										con >> when;
@@ -804,14 +804,14 @@ public:
 											else
 											{
 												system("cls");
-												cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+												cout << "AynÃ½ sefer zaten oluÃ¾turulmuÃ¾.Tekrar deneyin." << endl;
 												con.str("");
 												goto ExpeditionsAGAIN1;
 											}
 										}
 										else
 										{
-											cout << "Hatalý saat girdiniz.Tekrar seçiniz." << endl;
+											cout << "HatalÃ½ saat girdiniz.Tekrar seÃ§iniz." << endl;
 											goto ExpeditionsAGAIN5;
 										}
 										break;
@@ -858,25 +858,25 @@ public:
 											else
 											{
 												system("cls");
-												cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+												cout << "AynÃ½ sefer zaten oluÃ¾turulmuÃ¾.Tekrar deneyin." << endl;
 												goto ExpeditionsAGAIN1;
 											}
 										}
 										else
 										{
-											cout << "Hatalý fiyat girdiniz.Tekrar giriniz." << endl;
+											cout << "HatalÃ½ fiyat girdiniz.Tekrar giriniz." << endl;
 											goto ExpeditionsAGAIN6;
 										}
 										break;
 									default:
-										cout << "Hatalý seçim yaptýnýz.Tekrar seçiniz." << endl;
+										cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 										goto ExpeditionsAGAIN1;
 										break;
 									}
 								}
 							}
 							system("cls");
-							cout << "Girdiðiniz sefer id'ye ait sefer bulunamadý." << endl;
+							cout << "GirdiÃ°iniz sefer id'ye ait sefer bulunamadÃ½." << endl;
 							ExCheck.close();
 						}
 						else
@@ -887,7 +887,7 @@ public:
 					else
 					{
 						system("cls");
-						cout << "Hesabýnýzýn yetkisi bu iþlem için yeterli deðildir." << endl;
+						cout << "HesabÃ½nÃ½zÃ½n yetkisi bu iÃ¾lem iÃ§in yeterli deÃ°ildir." << endl;
 					}
 				}
 			}
@@ -947,7 +947,7 @@ private:
 	void ErrorActions()
 	{
 		system("cls");
-		cout << "Dosya açma hatasý.Kapatýlýyor...";
+		cout << "Dosya aÃ§ma hatasÃ½.KapatÃ½lÃ½yor...";
 		Sleep(2500);
 		exit(0);
 	}
@@ -968,22 +968,22 @@ public:
 		int CustomerID = 0, ExpeditionID = 0, SeatNo = 0; int CustomerChoose, location1, location2, CustomerSecim, CustomerSecim2, SelectedSeat;
 		string kalkis, varis; int sfrid[50]; int sfrsayisi[50];
 	TicketAGAIN:
-		cout << "1-Sefer Ara\n2-Listeden Seç" << endl;
-		cout << "Seçiminiz :";
+		cout << "1-Sefer Ara\n2-Listeden SeÃ§" << endl;
+		cout << "SeÃ§iminiz :";
 		cin >> CustomerSecim;
 		switch (CustomerSecim)
 		{
 		case 1:
 			system("cls");
 		TicketAGAIN2:
-			cout << "Kalkýþ yerinin plakasýný giriniz :";
+			cout << "KalkÃ½Ã¾ yerinin plakasÃ½nÃ½ giriniz :";
 			cin >> location1;
-			cout << "Varýþ yerinin plakasýný giriniz :";
+			cout << "VarÃ½Ã¾ yerinin plakasÃ½nÃ½ giriniz :";
 			cin >> location2;
 			if (location1 < 1 || location1 > 81 || location1 == 0 && location2 < 1 || location2 > 81 || location2 == 0)
 			{
 				system("cls");
-				cout << "Geçersiz plaka giriþi yaptýnýz.Tekrar seçiniz." << endl;
+				cout << "GeÃ§ersiz plaka giriÃ¾i yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 				goto TicketAGAIN2;
 			}
 			else
@@ -993,7 +993,7 @@ public:
 				if (kalkis == varis)
 				{
 					system("cls");
-					cout << "Kalkýþ ve varýþ yerleri ayný olamaz.Tekrar seçiniz." << endl;
+					cout << "KalkÃ½Ã¾ ve varÃ½Ã¾ yerleri aynÃ½ olamaz.Tekrar seÃ§iniz." << endl;
 					goto TicketAGAIN2;
 				}
 				else
@@ -1025,12 +1025,12 @@ public:
 						if (sayi == 0)
 						{
 							system("cls");
-							cout << "Aradýðýnýz kriterlere göre sefer bulunamadý." << endl;
+							cout << "AradÃ½Ã°Ã½nÃ½z kriterlere gÃ¶re sefer bulunamadÃ½." << endl;
 							goto TicketAGAIN;
 						}
 						else
 						{
-							cout << "Seçiminiz :";
+							cout << "SeÃ§iminiz :";
 							cin >> CustomerSecim2;
 							int status = 0;
 							for (int i = 0; i < sayi; i++)
@@ -1061,7 +1061,7 @@ public:
 							else
 							{
 								system("cls");
-								cout << "Hatalý seçim yaptýnýz.Tekrar seçiniz." << endl;
+								cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 								goto TicketAGAIN3;
 							}
 						}
@@ -1098,12 +1098,12 @@ public:
 				if (sayi == 0)
 				{
 					system("cls");
-					cout << "Sefer bulunamadý." << endl;
+					cout << "Sefer bulunamadÃ½." << endl;
 					goto TicketAGAIN;
 				}
 				else
 				{
-					cout << "Seçiminiz :";
+					cout << "SeÃ§iminiz :";
 					cin >> CustomerSecim2;
 					int status = 0;
 					for (int i = 0; i < sayi; i++)
@@ -1134,7 +1134,7 @@ public:
 					else
 					{
 						system("cls");
-						cout << "Hatalý seçim yaptýnýz.Tekrar seçiniz." << endl;
+						cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.Tekrar seÃ§iniz." << endl;
 						goto TicketAGAIN4;
 					}
 				}
@@ -1146,7 +1146,7 @@ public:
 			break;
 		default:
 			system("cls");
-			cout << "Hatalý tuþlama gerçekleþtirdiniz.Tekrar seçiniz." << endl;
+			cout << "HatalÃ½ tuÃ¾lama gerÃ§ekleÃ¾tirdiniz.Tekrar seÃ§iniz." << endl;
 			goto TicketAGAIN;
 			break;
 		}
@@ -1155,7 +1155,7 @@ public:
 	{
 		int ticket; int status = 0; int kltk; int Choose; int sfr;
 	EditAGAIN:
-		cout << "Düzenlemek istediðiniz bilet id bilgisini giriniz :";
+		cout << "DÃ¼zenlemek istediÃ°iniz bilet id bilgisini giriniz :";
 		cin >> ticket;
 		ifstream TicketData("TicketEntry.txt");
 		fstream ChangeT;
@@ -1175,8 +1175,8 @@ public:
 			if (status == 1)
 			{
 				int line = 0;
-				cout << "Sadece koltuk bilgilerini deðiþtirebilirsiniz." << endl;
-				cout << "Mevcut koltuk numarasý :" << kltk << endl;
+				cout << "Sadece koltuk bilgilerini deÃ°iÃ¾tirebilirsiniz." << endl;
+				cout << "Mevcut koltuk numarasÃ½ :" << kltk << endl;
 				Choose = Seats(sfr);
 				ChangeT.open("TicketEntry.txt", ios::in);
 				Temp.open("temp.txt", ios::out);
@@ -1212,7 +1212,7 @@ public:
 			else
 			{
 				system("cls");
-				cout << "Girilen bilet id sine ait kayýt bulunamadý." << endl;
+				cout << "Girilen bilet id sine ait kayÃ½t bulunamadÃ½." << endl;
 				goto EditAGAIN;
 			}
 		}
@@ -1227,7 +1227,7 @@ public:
 	DeleteAGAIN:
 		if (w.GetAuthControl(LoggedWorkerID) == 1)
 		{
-			cout << "Silmek istediðiniz bilet id bilgisini giriniz :";
+			cout << "Silmek istediÃ°iniz bilet id bilgisini giriniz :";
 			cin >> tid;
 			ifstream TicketData("TicketEntry.txt");
 			fstream DeleteT;
@@ -1270,7 +1270,7 @@ public:
 				else
 				{
 					system("cls");
-					cout << "Girilen bilet id sine ait kayýt bulunamadý." << endl;
+					cout << "Girilen bilet id sine ait kayÃ½t bulunamadÃ½." << endl;
 					goto DeleteAGAIN;
 				}
 			}
@@ -1282,7 +1282,7 @@ public:
 		else
 		{
 			system("cls");
-			cout << "Yetkiniz bu iþlem için yeterli deðildir." << endl;
+			cout << "Yetkiniz bu iÃ¾lem iÃ§in yeterli deÃ°ildir." << endl;
 			return 0;
 		}
 	}
@@ -1362,8 +1362,8 @@ public:
 						}
 						cout << "\n";
 					}
-					cout << "Lütfen koltuk seçimi yapýnýz." << endl;
-					cout << "Seçiminiz :";
+					cout << "LÃ¼tfen koltuk seÃ§imi yapÃ½nÃ½z." << endl;
+					cout << "SeÃ§iminiz :";
 					cin >> Choose;
 					status = 0;
 					for (int i = 0; i <= a; i++)
@@ -1382,13 +1382,13 @@ public:
 					if (Choose < 1 || Choose>46)
 					{
 						system("cls");
-						cout << "Geçersiz koltuk seçimi.Tekrar seçiniz." << endl;
+						cout << "GeÃ§ersiz koltuk seÃ§imi.Tekrar seÃ§iniz." << endl;
 						goto CustomerChoose;
 					}
 					else if (status == 1)
 					{
 						system("cls");
-						cout << "Bu koltuk daha önceden seçilmiþtir." << endl;
+						cout << "Bu koltuk daha Ã¶nceden seÃ§ilmiÃ¾tir." << endl;
 						goto CustomerChoose;
 					}
 					else
@@ -1421,8 +1421,8 @@ public:
 						}
 						cout << "\n";
 					}
-					cout << "Lütfen koltuk seçimi yapýnýz." << endl;
-					cout << "Seçiminiz :";
+					cout << "LÃ¼tfen koltuk seÃ§imi yapÃ½nÃ½z." << endl;
+					cout << "SeÃ§iminiz :";
 					cin >> Choose;
 					status = 0;
 					for (int i = 0; i <= a; i++)
@@ -1441,13 +1441,13 @@ public:
 					if (Choose < 1 || Choose>38)
 					{
 						system("cls");
-						cout << "Geçersiz koltuk seçimi.Tekrar seçiniz." << endl;
+						cout << "GeÃ§ersiz koltuk seÃ§imi.Tekrar seÃ§iniz." << endl;
 						goto CustomerChoose;
 					}
 					else if (status == 1)
 					{
 						system("cls");
-						cout << "Bu koltuk daha önceden seçilmiþtir." << endl;
+						cout << "Bu koltuk daha Ã¶nceden seÃ§ilmiÃ¾tir." << endl;
 						goto CustomerChoose;
 					}
 					else
@@ -1474,7 +1474,7 @@ private:
 	void ErrorActions()
 	{
 		system("cls");
-		cout << "Dosya açma hatasý.Kapatýlýyor...";
+		cout << "Dosya aÃ§ma hatasÃ½.KapatÃ½lÃ½yor...";
 		Sleep(2500);
 		exit(0);
 	}
@@ -1502,7 +1502,7 @@ void CustomerTickets(int UserID)
 		UserTickets.close();
 		if (t.a == 0)
 		{
-			cout << "Bu hesaba ait bilet bilgileri bulunamadý." << endl;
+			cout << "Bu hesaba ait bilet bilgileri bulunamadÃ½." << endl;
 		}
 		else
 		{
@@ -1521,7 +1521,7 @@ void CustomerTickets(int UserID)
 						}
 					}
 				}
-				cout << "Toplamda " << t.a << " adet kayýt bulundu." << endl;
+				cout << "Toplamda " << t.a << " adet kayÃ½t bulundu." << endl;
 			}
 			else
 			{
@@ -1538,10 +1538,10 @@ int main()
 {
 	setlocale(LC_ALL, "Turkish");
 	int secim, hak = 3, result = 0;
-	cout << "Merhaba , otomasyona hoþgeldiniz lütfen seçim yapýnýz." << endl;
+	cout << "Merhaba , otomasyona hoÃ¾geldiniz lÃ¼tfen seÃ§im yapÃ½nÃ½z." << endl;
 MainMenu:
-	cout << "1-Müþteri Giriþi" << "\n" << "2-Yetkili Giriþi" << "\n" << "3-Müþteri Kaydý" << "\n" << "9-Çýkýþ" << endl;
-	cout << "Seçiminiz :";
+	cout << "1-MÃ¼Ã¾teri GiriÃ¾i" << "\n" << "2-Yetkili GiriÃ¾i" << "\n" << "3-MÃ¼Ã¾teri KaydÃ½" << "\n" << "9-Ã‡Ã½kÃ½Ã¾" << endl;
+	cout << "SeÃ§iminiz :";
 	cin >> secim;
 	Tickets t;
 	Expeditions e;
@@ -1558,17 +1558,17 @@ MainMenu:
 			if (result == 2)
 			{
 				system("cls");
-				cout << "Giriþ baþarýlý.Müþteri paneline yönlendiriliyor..." << endl;
+				cout << "GiriÃ¾ baÃ¾arÃ½lÃ½.MÃ¼Ã¾teri paneline yÃ¶nlendiriliyor..." << endl;
 				Sleep(2000);
 				system("cls");
 				int CustomerSecim1;
 			CustomerAGAIN1:
-				cout << "-----Müþteri Paneli-----" << endl;
+				cout << "-----MÃ¼Ã¾teri Paneli-----" << endl;
 				cout << "1-Bilet Al" << endl;
 				cout << "2-Biletlerim" << endl;
-				cout << "3-Çýkýþ Yap" << endl;
-				cout << "9-Kullanýcý Ýþlemleri" << endl;
-				cout << "Seçiminiz :";
+				cout << "3-Ã‡Ã½kÃ½Ã¾ Yap" << endl;
+				cout << "9-KullanÃ½cÃ½ ÃÃ¾lemleri" << endl;
+				cout << "SeÃ§iminiz :";
 				cin >> CustomerSecim1;
 				switch (CustomerSecim1)
 				{
@@ -1578,7 +1578,7 @@ MainMenu:
 					if (t.AddTicket(c.LoggedUserID) == 1)
 					{
 						system("cls");
-						cout << "Bilet alýmý baþarýyla gerçekleþtirildi." << endl;
+						cout << "Bilet alÃ½mÃ½ baÃ¾arÃ½yla gerÃ§ekleÃ¾tirildi." << endl;
 						goto CustomerAGAIN1;
 					}
 					break;
@@ -1587,11 +1587,11 @@ MainMenu:
 					int secim;
 					CustomerTickets(c.LoggedUserID);
 				CustomerAGAINx:
-					cout << "Geri dönmek için 9 tuþuna basýnýz :";
+					cout << "Geri dÃ¶nmek iÃ§in 9 tuÃ¾una basÃ½nÃ½z :";
 					cin >> secim;
 					if (secim != 9)
 					{
-						cout << "Hatalý tuþlama yaptýnýz." << endl;
+						cout << "HatalÃ½ tuÃ¾lama yaptÃ½nÃ½z." << endl;
 						goto CustomerAGAINx;
 					}
 					else
@@ -1602,23 +1602,23 @@ MainMenu:
 					break;
 				case 3:
 					system("cls");
-					cout << "Çýkýþ yapýldý..." << endl;
+					cout << "Ã‡Ã½kÃ½Ã¾ yapÃ½ldÃ½..." << endl;
 					goto MainMenu;
 					break;
 				case 9:system("cls");
 					int CustomerSecim2;
 				CustomerAGAIN2:
-					cout << "---Kullanýcý Ýþlemleri---" << endl;
-					cout << "1-Þifre Güncelleme" << endl;
+					cout << "---KullanÃ½cÃ½ ÃÃ¾lemleri---" << endl;
+					cout << "1-Ãžifre GÃ¼ncelleme" << endl;
 					cout << "2-Hesap Kapatma" << endl;
-					cout << "Seçiminiz :";
+					cout << "SeÃ§iminiz :";
 					cin >> CustomerSecim2;
 					switch (CustomerSecim2)
 					{
 					case 1:
 						if (c.CustomerChangePassword(c.LoggedUserID) == 1)
 						{
-							cout << "Þifre deðiþtirme iþlemi baþarýyla tamamlandý.Ana menüye geri dönülüyor...";
+							cout << "Ãžifre deÃ°iÃ¾tirme iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½.Ana menÃ¼ye geri dÃ¶nÃ¼lÃ¼yor...";
 							Sleep(2000);
 							system("cls");
 							goto MainMenu;
@@ -1627,7 +1627,7 @@ MainMenu:
 					case 2:
 						if (c.CustomerDeregistration(c.LoggedUserID) == 1)
 						{
-							cout << "Hesap kapatma iþlemi baþarýyla tamamlandý.Ana menüye geri dönülüyor...";
+							cout << "Hesap kapatma iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½.Ana menÃ¼ye geri dÃ¶nÃ¼lÃ¼yor...";
 							Sleep(2000);
 							system("cls");
 							goto MainMenu;
@@ -1635,12 +1635,12 @@ MainMenu:
 						break;
 					default:
 						system("cls");
-						cout << "Hatalý seçim yaptýnýz.Lütfen tekrar seçim yapýnýz" << endl;
+						cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.LÃ¼tfen tekrar seÃ§im yapÃ½nÃ½z" << endl;
 						goto CustomerAGAIN2;
 						break;
 					}
 					break;
-				default:cout << "Hatalý seçim yaptýnýz.Lütfen tekrar seçim yapýnýz" << endl;
+				default:cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.LÃ¼tfen tekrar seÃ§im yapÃ½nÃ½z" << endl;
 					goto CustomerAGAIN1;
 					break;
 				}
@@ -1648,7 +1648,7 @@ MainMenu:
 			else if (result == 1)
 			{
 				system("cls");
-				cout << "Bu müþteri hesabý kapatýlmýþtýr.Ana menüye yönlendiriliyorsunuz..." << endl;
+				cout << "Bu mÃ¼Ã¾teri hesabÃ½ kapatÃ½lmÃ½Ã¾tÃ½r.Ana menÃ¼ye yÃ¶nlendiriliyorsunuz..." << endl;
 				Sleep(2500);
 				system("cls");
 				goto MainMenu;
@@ -1657,11 +1657,11 @@ MainMenu:
 			{
 				system("cls");
 				hak--;
-				cout << "Giriþ baþarýsýz" << endl;
-				cout << "Kalan hak sayýnýz : " << hak << endl;
+				cout << "GiriÃ¾ baÃ¾arÃ½sÃ½z" << endl;
+				cout << "Kalan hak sayÃ½nÃ½z : " << hak << endl;
 				if (hak == 0)
 				{
-					cout << "Çok fazla hatalý oturum açma giriþiminde bulundunuz.Program kapatýlýyor.";
+					cout << "Ã‡ok fazla hatalÃ½ oturum aÃ§ma giriÃ¾iminde bulundunuz.Program kapatÃ½lÃ½yor.";
 					Sleep(2500);
 					exit(0);
 				}
@@ -1678,18 +1678,18 @@ MainMenu:
 			if (result == 2)
 			{
 				system("cls");
-				cout << "Giriþ baþarýlý.Yetkili paneline yönlendiriliyor..." << endl;
+				cout << "GiriÃ¾ baÃ¾arÃ½lÃ½.Yetkili paneline yÃ¶nlendiriliyor..." << endl;
 				Sleep(2000);
 				system("cls");
 			WorkerAGAIN1:
 				cout << "-----Yetkili Paneli-----" << endl;
 				cout << "1-Sefer Ekle" << endl;
-				cout << "2-Sefer Düzenle" << endl;
-				cout << "3-Bilet Ýþlemleri" << endl;
-				cout << "4-Çýkýþ Yap" << endl;
-				cout << "9-Yetkili Ýþlemleri" << endl;
+				cout << "2-Sefer DÃ¼zenle" << endl;
+				cout << "3-Bilet ÃÃ¾lemleri" << endl;
+				cout << "4-Ã‡Ã½kÃ½Ã¾ Yap" << endl;
+				cout << "9-Yetkili ÃÃ¾lemleri" << endl;
 				int WorkerSecim1, WorkerSecim2;
-				cout << "Seçiminiz :";
+				cout << "SeÃ§iminiz :";
 				cin >> WorkerSecim1;
 				switch (WorkerSecim1)
 				{
@@ -1699,7 +1699,7 @@ MainMenu:
 					if (e.AddExpedition() == 1)
 					{
 						system("cls");
-						cout << "Sefer ekleme iþleminiz baþarýyla gerçekleþtirildi." << endl;
+						cout << "Sefer ekleme iÃ¾leminiz baÃ¾arÃ½yla gerÃ§ekleÃ¾tirildi." << endl;
 						goto WorkerAGAIN1;
 					}
 					break;
@@ -1708,7 +1708,7 @@ MainMenu:
 					if (e.EditExpedition(w.LoggedWorkerID) == 1)
 					{
 						system("cls");
-						cout << "Sefer düzenleme iþlemi baþarýyla tamamlandý." << endl;
+						cout << "Sefer dÃ¼zenleme iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½." << endl;
 						goto WorkerAGAIN1;
 					}
 					else
@@ -1718,10 +1718,10 @@ MainMenu:
 					break;
 				case 3:
 					system("cls");
-					cout << "---Bilet Ýþlemleri---" << endl;
-					cout << "1-Bilet Düzenleme" << endl;
+					cout << "---Bilet ÃÃ¾lemleri---" << endl;
+					cout << "1-Bilet DÃ¼zenleme" << endl;
 					cout << "2-Bilet Sil" << endl;
-					cout << "Seçiminiz :";
+					cout << "SeÃ§iminiz :";
 					cin >> WorkerSecim2;
 					switch (WorkerSecim2)
 					{
@@ -1730,7 +1730,7 @@ MainMenu:
 						if (t.EditTicket() == 1)
 						{
 							system("cls");
-							cout << "Bilet düzenleme iþlemi baþarýlý." << endl;
+							cout << "Bilet dÃ¼zenleme iÃ¾lemi baÃ¾arÃ½lÃ½." << endl;
 							goto WorkerAGAIN1;
 						}
 						break;
@@ -1739,7 +1739,7 @@ MainMenu:
 						if (t.DeletingTicket(w.LoggedWorkerID) == 1)
 						{
 							system("cls");
-							cout << "Bilet silme iþlemi baþarýyla tamamlandý." << endl;
+							cout << "Bilet silme iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½." << endl;
 							goto WorkerAGAIN1;
 						}
 						else
@@ -1753,17 +1753,17 @@ MainMenu:
 					break;
 				case 4:
 					system("cls");
-					cout << "Çýkýþ yapýldý..." << endl;
+					cout << "Ã‡Ã½kÃ½Ã¾ yapÃ½ldÃ½..." << endl;
 					goto MainMenu;
 					break;
 				case 9:
 					system("cls");
 				WorkerAGAIN2:
-					cout << "---Yetkili Ýþlemleri---" << endl;
-					cout << "1-Þifre Güncelleme" << endl;
+					cout << "---Yetkili ÃÃ¾lemleri---" << endl;
+					cout << "1-Ãžifre GÃ¼ncelleme" << endl;
 					cout << "2-Hesap Kapatma" << endl;
-					cout << "3-Yeni Çalýþan Kaydý Ekle" << endl;
-					cout << "Seçiminiz :";
+					cout << "3-Yeni Ã‡alÃ½Ã¾an KaydÃ½ Ekle" << endl;
+					cout << "SeÃ§iminiz :";
 					cin >> WorkerSecim2;
 					switch (WorkerSecim2)
 					{
@@ -1771,7 +1771,7 @@ MainMenu:
 						system("cls");
 						if (w.WorkerResetPassword(w.LoggedWorkerID) == 1)
 						{
-							cout << "Þifre deðiþtirme iþlemi baþarýyla tamamlandý.Ana menüye geri dönülüyor...";
+							cout << "Ãžifre deÃ°iÃ¾tirme iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½.Ana menÃ¼ye geri dÃ¶nÃ¼lÃ¼yor...";
 							Sleep(2000);
 							system("cls");
 							goto MainMenu;
@@ -1781,7 +1781,7 @@ MainMenu:
 						system("cls");
 						if (w.WorkerDeregistration(w.LoggedWorkerID) == 1)
 						{
-							cout << "Hesap kapatma iþlemi baþarýyla tamamlandý.Ana menüye geri dönülüyor...";
+							cout << "Hesap kapatma iÃ¾lemi baÃ¾arÃ½yla tamamlandÃ½.Ana menÃ¼ye geri dÃ¶nÃ¼lÃ¼yor...";
 							Sleep(2000);
 							system("cls");
 							goto MainMenu;
@@ -1793,18 +1793,18 @@ MainMenu:
 						if (w.WorkerEntry() == 1)
 						{
 							system("cls");
-							cout << "Kayýt iþleminiz baþarýyla gerçekleþtirildi." << endl;
+							cout << "KayÃ½t iÃ¾leminiz baÃ¾arÃ½yla gerÃ§ekleÃ¾tirildi." << endl;
 							goto WorkerAGAIN1;
 						}
 						break;
 					default:system("cls");
-						cout << "Hatalý seçim yaptýnýz.Lütfen tekrar seçim yapýnýz" << endl;
+						cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.LÃ¼tfen tekrar seÃ§im yapÃ½nÃ½z" << endl;
 						goto WorkerAGAIN2;
 						break;
 					}
 					break;
 				default:system("cls");
-					cout << "Hatalý seçim yaptýnýz.Lütfen tekrar seçim yapýnýz" << endl;
+					cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.LÃ¼tfen tekrar seÃ§im yapÃ½nÃ½z" << endl;
 					goto WorkerAGAIN1;
 					break;
 				}
@@ -1812,7 +1812,7 @@ MainMenu:
 			else if (result == 1)
 			{
 				system("cls");
-				cout << "Bu yetkili hesabý kapatýlmýþtýr.Ana menüye yönlendiriliyorsunuz..." << endl;
+				cout << "Bu yetkili hesabÃ½ kapatÃ½lmÃ½Ã¾tÃ½r.Ana menÃ¼ye yÃ¶nlendiriliyorsunuz..." << endl;
 				Sleep(2500);
 				goto MainMenu;
 			}
@@ -1820,11 +1820,11 @@ MainMenu:
 			{
 				system("cls");
 				hak--;
-				cout << "Giriþ baþarýsýz" << endl;
-				cout << "Kalan hak sayýnýz : " << hak << endl;
+				cout << "GiriÃ¾ baÃ¾arÃ½sÃ½z" << endl;
+				cout << "Kalan hak sayÃ½nÃ½z : " << hak << endl;
 				if (hak == 0)
 				{
-					cout << "Çok fazla hatalý oturum açma giriþiminde bulundunuz.Program kapatýlýyor.";
+					cout << "Ã‡ok fazla hatalÃ½ oturum aÃ§ma giriÃ¾iminde bulundunuz.Program kapatÃ½lÃ½yor.";
 					Sleep(2500);
 					exit(0);
 				}
@@ -1840,7 +1840,7 @@ MainMenu:
 			if (c.CustomerEntry() == 1)
 			{
 				system("cls");
-				cout << "Kayýt iþleminiz baþarýyla gerçekleþtirildi.Giriþ yapabilirsiniz." << endl;
+				cout << "KayÃ½t iÃ¾leminiz baÃ¾arÃ½yla gerÃ§ekleÃ¾tirildi.GiriÃ¾ yapabilirsiniz." << endl;
 				goto MainMenu;
 			}
 			break;
@@ -1849,11 +1849,10 @@ MainMenu:
 			break;
 		default:
 			system("cls");
-			cout << "Hatalý seçim yaptýnýz.Lütfen tekrar seçim yapýnýz" << endl;
+			cout << "HatalÃ½ seÃ§im yaptÃ½nÃ½z.LÃ¼tfen tekrar seÃ§im yapÃ½nÃ½z" << endl;
 			goto MainMenu;
 		}
 	} while (secim != 1 && secim != 2 && secim != 9);
-	system("pause");
 	return 0;
 }
 //
