@@ -8,6 +8,7 @@ A little more detailed automation than a normal automation.
 
 ## Functions of automation
 There are separate areas for customers and authorities within the automation.
+
 For Customers :
 * Customer Login
 * Registration
@@ -16,6 +17,7 @@ For Customers :
 * Change Password
 * Disable Account
 * Logout
+
 For Authorities :
 * Authorized Person Login
 * Adding Employee
