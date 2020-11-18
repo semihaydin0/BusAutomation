@@ -1,0 +1,4 @@
+1	asuman	3468	tam	aktif
+2	ahmet	ali	yarý	aktif
+3	burak	123	tam	aktif
+4	buse	7896	tam	inaktif
