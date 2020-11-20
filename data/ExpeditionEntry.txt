@@ -1,6 +1,7 @@
-1	Ýstanbul	Antalya	13.7.2020	13.53	155	46
-2	Adýyaman	Van	6.10.2021	18.15	125	46
-3	Adýyaman	Erzurum	6.7.2020	15.3	55	38
-4	Ýstanbul	Antalya	13.7.2020	13.52	155	38
-5	Ýzmir	Van	6.8.2020	14.50	45	46
-6	Ýstanbul	Osmaniye	5.11.2020	14.30	155	38
+1	Ýstanbul	Antalya	7.10.2021	13.53	50	46
+2	Adýyaman	Van	7.10.2021	18.15	50	46
+3	Adýyaman	Erzurum	7.10.2021	15.3	50	38
+4	Ýstanbul	Antalya	7.10.2021	13.52	50	38
+5	Ýzmir	Van	7.10.2021	14.50	50	46
+6	Ýstanbul	Osmaniye	7.10.2021	14.30	50	38
+7	Siirt	Bingöl	7.10.2021	13.00	50	46
