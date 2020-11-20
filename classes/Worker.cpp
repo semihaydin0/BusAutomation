@@ -1,5 +1,5 @@
 //MIT License
-//Copyright(c) 2020 Semih Aydýn
+//Copyright(c) 2020 Semih AydÄ±n
 //UTF - 8
 //Display Languague : Turkish
 
@@ -21,14 +21,14 @@ int Worker::WorkerRegistration()
 	string _username, _password, authority;
 	char auth;
 	
-	cout << "Lütfen çalýþan kiþi için kullanýcý adý ve þifre belirleyiniz." << endl;
+	cout << "LÃ¼tfen Ã§alÄ±ÅŸan kiÅŸi iÃ§in kullanÄ±cÄ± adÄ± ve ÅŸifre belirleyiniz." << endl;
 workerentry:
-	cout << "Kullanýcý Adý :";
+	cout << "KullanÄ±cÄ± AdÄ± :";
 	cin >> _username;
-	cout << "Þifre :";
+	cout << "Åžifre :";
 	cin >> _password;
 againauth:
-	cout << "Lütfen yetki türü seçiniz.\n1-Tam\n2-Yarý\nSeçiminiz :" << endl;
+	cout << "LÃ¼tfen yetki tÃ¼rÃ¼ seÃ§iniz.\n1-Tam\n2-YarÄ±\nSeÃ§iminiz :" << endl;
 	cin >> auth;
 	
 	switch (auth)
@@ -38,11 +38,11 @@ againauth:
 		
 		break;
 	case '2':
-		authority = "yarý";
+		authority = "yarÄ±";
 		
 		break;
 	default:
-		cout << "Hatalý seçim yaptýnýz tekrar deneyin.";
+		cout << "HatalÄ± seÃ§im yaptÄ±nÄ±z tekrar deneyin.";
 		goto againauth;
 		
 		break;
@@ -69,7 +69,7 @@ againauth:
 		else
 		{
 			system("cls");
-			cout << "Girmiþ olduðunuz kullanýcý adý daha önceden alýnmýþtýr." << endl;
+			cout << "GirmiÅŸ olduÄŸunuz kullanÄ±cÄ± adÄ± daha Ã¶nceden alÄ±nmÄ±ÅŸtÄ±r." << endl;
 			
 			goto workerentry;
 		}
@@ -77,7 +77,7 @@ againauth:
 	else
 	{
 		system("cls");
-		cout << "Oluþturmaya çalýþtýðýnýz hesabýn yetkisi sizin yetkinizden yüksek olduðu için hesap oluþturulamadý." << endl;
+		cout << "OluÅŸturmaya Ã§alÄ±ÅŸtÄ±ÄŸÄ±nÄ±z hesabÄ±n yetkisi sizin yetkinizden yÃ¼ksek olduÄŸu iÃ§in hesap oluÅŸturulamadÄ±." << endl;
 		
 		goto workerentry;
 	}
@@ -87,9 +87,9 @@ int Worker::WorkerLogin()
 	int account = 0, status = 0, sum = 0;
 	string _username, _password;
 	
-	cout << "Kullanýcý Adý :";
+	cout << "KullanÄ±cÄ± AdÄ± :";
 	cin >> _username;
-	cout << "Þifre :";
+	cout << "Åžifre :";
 	cin >> _password;
 	ifstream WorkerLoginFile("WorkerEntry.txt");
 	
@@ -188,7 +188,7 @@ int Worker::WorkerResetPassword(int WorkerIDValue)
 	ofstream Temp;
 	string NewPassword;
 	
-	cout << "Yeni þifrenizi giriniz :";
+	cout << "Yeni ÅŸifrenizi giriniz :";
 	cin >> NewPassword;
 	
 	WorkerP.open("WorkerEntry.txt", ios::in);
@@ -248,7 +248,7 @@ int Worker::AuthorityControl(string personauth, string auth)
 		{
 			Control >> registrationID >> username >> password >> auth >> activity;
 			
-			if (personauth == auth || personauth == "tam" && auth == "yarý")
+			if (personauth == auth || personauth == "tam" && auth == "yarÄ±")
 			{
 				
 				return 1;
@@ -305,7 +305,7 @@ int Worker::WorkerRecordCheck(string workerusername)
 void Worker::FileExp()
 {
 	system("cls");
-	cout << "Dosya açma hatasý.Kapatýlýyor...";
+	cout << "Dosya aÃ§ma hatasÄ±.KapatÄ±lÄ±yor...";
 	Sleep(2500);
 	exit(0);
 }
