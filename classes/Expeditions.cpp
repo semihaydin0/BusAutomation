@@ -1,5 +1,5 @@
 //MIT License
-//Copyright(c) 2020 Semih Aydýn
+//Copyright(c) 2020 Semih AydÄ±n
 //UTF - 8
 //Display Languague : Turkish
 
@@ -25,15 +25,15 @@ int Expeditions::AddExpedition()
 
 ExpeditionsAGAIN1:
 	
-	cout << "Kalkýþ yerinin plakasýný giriniz :";
+	cout << "KalkÄ±ÅŸ yerinin plakasÄ±nÄ± giriniz :";
 	cin >> location1_;
-	cout << "Varýþ yerinin plakasýný giriniz :";
+	cout << "VarÄ±ÅŸ yerinin plakasÄ±nÄ± giriniz :";
 	cin >> location2_;
 	
 	if (location1_ < 1 || location1_ > 81 || location1_ == 0 && location2_ < 1 || location2_ > 81 || location2_ == 0)
 	{
 		system("cls");
-		cout << "Geçersiz plaka giriþi yaptýnýz.Tekrar seçiniz." << endl;
+		cout << "GeÃ§ersiz plaka giriÅŸi yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 		
 		goto ExpeditionsAGAIN1;
 	}
@@ -45,25 +45,25 @@ ExpeditionsAGAIN1:
 		if (departureP_ == destinationP_)
 		{
 			system("cls");
-			cout << "Kalkýþ ve varýþ yerleri ayný olamaz.Tekrar seçiniz." << endl;
+			cout << "KalkÄ±ÅŸ ve varÄ±ÅŸ yerleri aynÄ± olamaz.Tekrar seÃ§iniz." << endl;
 			
 			goto ExpeditionsAGAIN1;
 		}
 	ExpeditionsAGAIN2:
 		
-		cout << "Sefer gününü giriniz :";
+		cout << "Sefer gÃ¼nÃ¼nÃ¼ giriniz :";
 		cin >> day_;
 		
 		if (day_ <= 31 && day_ >= 1)
 		{
 		ExpeditionsAGAIN3:
-			cout << "Sefer ayýný giriniz :";
+			cout << "Sefer ayÄ±nÄ± giriniz :";
 			cin >> month_;
 			
 			if (month_ <= 12 && month_ >= 1)
 			{
 			ExpeditionsAGAIN4:
-				cout << "Sefer yýlýnýz giriniz :";
+				cout << "Sefer yÄ±lÄ±nÄ±z giriniz :";
 				cin >> year_;
 				
 				if (year_ >= 2020)
@@ -74,7 +74,7 @@ ExpeditionsAGAIN1:
 				
 				ExpeditionsAGAIN5:
 					
-					cout << "Sefer saatini giriniz.(Örneðin 17.30) :";
+					cout << "Sefer saatini giriniz.(Ã–rneÄŸin 17.30) :";
 					cin >> time_;
 					stringstream con(time_);
 					con >> when_;
@@ -91,7 +91,7 @@ ExpeditionsAGAIN1:
 						
 						ExpeditionsAGAIN7:
 							
-							cout << "Koltuk düzeni seçiniz.\n1-2+2\n2-2+1\nSeçiminiz :";
+							cout << "Koltuk dÃ¼zeni seÃ§iniz.\n1-2+2\n2-2+1\nSeÃ§iminiz :";
 							cin >> schemeselec;
 							
 							switch (schemeselec)
@@ -105,7 +105,7 @@ ExpeditionsAGAIN1:
 								
 								break;
 							default:
-								cout << "Hatalý giriþ yaptýnýz.Tekrar seçiniz." << endl;
+								cout << "HatalÄ± giriÅŸ yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 								goto ExpeditionsAGAIN7;
 								
 								break;
@@ -128,42 +128,42 @@ ExpeditionsAGAIN1:
 							else
 							{
 								system("cls");
-								cout << "Oluþturmaya çalýþtýðýnýz sefer halihazýrda mevcuttur.Ýlk kýsma yönlendiriliyorsunuz..." << endl;
+								cout << "OluÅŸturmaya Ã§alÄ±ÅŸtÄ±ÄŸÄ±nÄ±z sefer halihazÄ±rda mevcuttur.Ä°lk kÄ±sma yÃ¶nlendiriliyorsunuz..." << endl;
 								
 								goto ExpeditionsAGAIN1;
 							}
 						}
 						else
 						{
-							cout << "Hatalý fiyat girdiniz.Tekrar seçiniz." << endl;
+							cout << "HatalÄ± fiyat girdiniz.Tekrar seÃ§iniz." << endl;
 							
 							goto ExpeditionsAGAIN6;
 						}
 					}
 					else
 					{
-						cout << "Hatalý saat girdiniz.Tekrar seçiniz." << endl;
+						cout << "HatalÄ± saat girdiniz.Tekrar seÃ§iniz." << endl;
 						
 						goto ExpeditionsAGAIN5;
 					}
 				}
 				else
 				{
-					cout << "2020 yýlý öncesine sefer oluþturulamaz.Tekrar seçiniz." << endl;
+					cout << "2020 yÄ±lÄ± Ã¶ncesine sefer oluÅŸturulamaz.Tekrar seÃ§iniz." << endl;
 					
 					goto ExpeditionsAGAIN4;
 				}
 			}
 			else
 			{
-				cout << "Hatalý ay seçimi yaptýnýz.Tekrar seçiniz." << endl;
+				cout << "HatalÄ± ay seÃ§imi yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 				
 				goto ExpeditionsAGAIN3;
 			}
 		}
 		else
 		{
-			cout << "Hatalý gün seçimi yaptýnýz.Tekrar seçiniz." << endl;
+			cout << "HatalÄ± gÃ¼n seÃ§imi yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 			
 			goto ExpeditionsAGAIN2;
 		}
@@ -192,7 +192,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 				if (auth_ == "tam")
 				{
 					Check.close();
-					cout << "Düzenlemek istediðiniz seferin ID bilgisini giriniz :";
+					cout << "DÃ¼zenlemek istediÄŸiniz seferin ID bilgisini giriniz :";
 					cin >> ExpeditionsID_;
 					ifstream ExCheck("ExpeditionEntry.txt");
 					
@@ -210,7 +210,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 							
 							ExpeditionsAGAIN1:
 								
-								cout << "Lütfen düzenlemek istediðiniz kýsmý seçiniz.\n1-Tarih\n2-Saat\n3-Fiyat\nSeçiminiz :";
+								cout << "LÃ¼tfen dÃ¼zenlemek istediÄŸiniz kÄ±smÄ± seÃ§iniz.\n1-Tarih\n2-Saat\n3-Fiyat\nSeÃ§iminiz :";
 								cin >> editselec;
 								
 								switch (editselec)
@@ -218,7 +218,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 								case 1:
 									system("cls");
 								ExpeditionsAGAIN2:
-									cout << "Sefer gününü giriniz :";
+									cout << "Sefer gÃ¼nÃ¼nÃ¼ giriniz :";
 									cin >> day_;
 									
 									if (day_ <= 31 && day_ >= 1)
@@ -226,13 +226,13 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 									
 									ExpeditionsAGAIN3:
 										
-										cout << "Sefer ayýný giriniz :";
+										cout << "Sefer ayÄ±nÄ± giriniz :";
 										cin >> month_;
 										
 										if (month_ <= 12 && month_ >= 1)
 										{
 										ExpeditionsAGAIN4:
-											cout << "Sefer yýlýnýz giriniz :";
+											cout << "Sefer yÄ±lÄ±nÄ±z giriniz :";
 											cin >> year_;
 											
 											if (year_ >= 2020)
@@ -283,7 +283,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 												else
 												{
 													system("cls");
-													cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+													cout << "AynÄ± sefer zaten oluÅŸturulmuÅŸ.Tekrar deneyin." << endl;
 													a.str(""); b.str(""); c.str("");
 													
 													goto ExpeditionsAGAIN1;
@@ -291,21 +291,21 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 											}
 											else
 											{
-												cout << "2020 yýlý öncesine sefer oluþturulamaz.Tekrar seçiniz." << endl;
+												cout << "2020 yÄ±lÄ± Ã¶ncesine sefer oluÅŸturulamaz.Tekrar seÃ§iniz." << endl;
 												
 												goto ExpeditionsAGAIN4;
 											}
 										}
 										else
 										{
-											cout << "Hatalý ay seçimi yaptýnýz.Tekrar seçiniz." << endl;
+											cout << "HatalÄ± ay seÃ§imi yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 											
 											goto ExpeditionsAGAIN3;
 										}
 									}
 									else
 									{
-										cout << "Hatalý gün seçimi yaptýnýz.Tekrar seçiniz." << endl;
+										cout << "HatalÄ± gÃ¼n seÃ§imi yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 										
 										goto ExpeditionsAGAIN2;
 									}
@@ -315,7 +315,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 									system("cls");
 								
 								ExpeditionsAGAIN5:
-									cout << "Sefer saatini giriniz.(Örneðin 17.30) :";
+									cout << "Sefer saatini giriniz.(Ã–rneÄŸin 17.30) :";
 									cin >> NewTime;
 									con << NewTime;
 									con >> when;
@@ -366,7 +366,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 										else
 										{
 											system("cls");
-											cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+											cout << "AynÄ± sefer zaten oluÅŸturulmuÅŸ.Tekrar deneyin." << endl;
 											con.str("");
 											
 											goto ExpeditionsAGAIN1;
@@ -374,7 +374,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 									}
 									else
 									{
-										cout << "Hatalý saat girdiniz.Tekrar seçiniz." << endl;
+										cout << "HatalÄ± saat girdiniz.Tekrar seÃ§iniz." << endl;
 										
 										goto ExpeditionsAGAIN5;
 									}
@@ -433,21 +433,21 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 										else
 										{
 											system("cls");
-											cout << "Ayný sefer zaten oluþturulmuþ.Tekrar deneyin." << endl;
+											cout << "AynÄ± sefer zaten oluÅŸturulmuÅŸ.Tekrar deneyin." << endl;
 											
 											goto ExpeditionsAGAIN1;
 										}
 									}
 									else
 									{
-										cout << "Hatalý fiyat girdiniz.Tekrar giriniz." << endl;
+										cout << "HatalÄ± fiyat girdiniz.Tekrar giriniz." << endl;
 										
 										goto ExpeditionsAGAIN6;
 									}
 									
 									break;
 								default:
-									cout << "Hatalý seçim yaptýnýz.Tekrar seçiniz." << endl;
+									cout << "HatalÄ± seÃ§im yaptÄ±nÄ±z.Tekrar seÃ§iniz." << endl;
 									
 									goto ExpeditionsAGAIN1;
 									
@@ -456,7 +456,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 							}
 						}
 						system("cls");
-						cout << "Girdiðiniz sefer id'ye ait sefer bulunamadý." << endl;
+						cout << "GirdiÄŸiniz sefer id'ye ait sefer bulunamadÄ±." << endl;
 						
 						ExCheck.close();
 					}
@@ -465,7 +465,7 @@ int Expeditions::EditExpedition(int LoggedWorkerID)
 				else
 				{
 					system("cls");
-					cout << "Hesabýnýzýn yetkisi bu iþlem için yeterli deðildir." << endl;
+					cout << "HesabÄ±nÄ±zÄ±n yetkisi bu iÅŸlem iÃ§in yeterli deÄŸildir." << endl;
 				}
 			}
 		}
@@ -518,7 +518,7 @@ int Expeditions::CheckExpeditionEntry(string departureP_, string destinationP_, 
 void Expeditions::FileExp()
 {
 	system("cls");
-	cout << "Dosya açma hatasý.Kapatýlýyor...";
+	cout << "Dosya aÃ§ma hatasÄ±.KapatÄ±lÄ±yor...";
 	Sleep(2500);
 	exit(0);
 }
