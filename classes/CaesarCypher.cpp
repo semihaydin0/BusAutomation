@@ -1,5 +1,5 @@
 //MIT License
-//Copyright(c) 2020 Semih Aydýn
+//Copyright(c) 2020 Semih AydÄ±n
 //UTF - 8
 //Display Languague : Turkish
 
