@@ -1,5 +1,5 @@
 //MIT License
-//Copyright(c) 2020 Semih Aydýn
+//Copyright(c) 2020 Semih AydÄ±n
 //UTF - 8
 //Display Languague : Turkish
 
@@ -12,11 +12,11 @@ int Customer::CustomerRegistration()
 	index = 0;
 	string username, password;
 
-	cout << "Lütfen kullanýcý adý ve þifrenizi belirleyiniz." << endl;
+	cout << "LÃ¼tfen kullanÄ±cÄ± adÄ± ve ÅŸifrenizi belirleyiniz." << endl;
 again:
-	cout << "Kullanýcý Adý :";
+	cout << "KullanÄ±cÄ± AdÄ± :";
 	cin >> username;
-	cout << "Þifre :";
+	cout << "Åžifre :";
 	cin >> password;
 
 	if (CustomerRecordCheck(username) == 0)
@@ -36,7 +36,7 @@ again:
 	}
 	else
 	{
-		cout << "Girdiðiniz kullanýcý adý daha önceden alýnmýþtýr." << endl;
+		cout << "GirdiÄŸiniz kullanÄ±cÄ± adÄ± daha Ã¶nceden alÄ±nmÄ±ÅŸtÄ±r." << endl;
 		goto again;
 	}
 }
@@ -46,9 +46,9 @@ int Customer::CustomerLogin()
 	string username, password, activity, _username, _password;
 	ifstream CustomerRecordFile("CustomerEntry.txt");
 
-	cout << "Kullanýcý Adý :";
+	cout << "KullanÄ±cÄ± AdÄ± :";
 	cin >> _username;
-	cout << "Þifre :";
+	cout << "Åžifre :";
 	cin >> _password;
 
 	if (CustomerRecordFile.is_open())
@@ -150,7 +150,7 @@ int Customer::CustomerChangePassword(int UserIDValue)
 	fstream ChangeP;
 	ofstream Temp;
 
-	cout << "Yeni þifrenizi giriniz :";
+	cout << "Yeni ÅŸifrenizi giriniz :";
 	cin >> NewPassword;
 
 	ChangeP.open("CustomerEntry.txt", ios::in);
@@ -219,7 +219,7 @@ int Customer::CustomerRecordCheck(string _username)
 void Customer::FileExp()
 {
 	system("cls");
-	cout << "Dosya açma hatasý.Kapatýlýyor...";
+	cout << "Dosya aÃ§ma hatasÄ±.KapatÄ±lÄ±yor...";
 	Sleep(2500);
 
 	exit(0);
