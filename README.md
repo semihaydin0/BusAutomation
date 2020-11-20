@@ -6,6 +6,16 @@
 
 A little more detailed automation than a normal automation.
 
+Personal data in this application is encrypted using the caesar encryption algorithm.
+
+Example encryption : steven >= xyjajs
+
+> :warning: **Encryption key used: 5**
+
+Login information if you want to login as authorized ;
+
+Username : john | Password : cat
+
 ## Functions of automation
 There are separate areas for customers and authorities within the automation.
 
@@ -33,7 +43,7 @@ For Authorities :
 * C++
 
 ## Important
-> :warning: **The data files and the application file must be located in the same directory.**
+> :warning: **Data files and source files must be in the same directory.**
 
 ## Contact
 For any problems, you can contact me at the addresses below.
