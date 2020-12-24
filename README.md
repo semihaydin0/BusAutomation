@@ -6,9 +6,14 @@
 
 A little more detailed automation than a normal automation.
 
-Personal data in this application is encrypted using the caesar encryption algorithm.
+## Important
+> :warning: **Data files and source files must be in the same directory.**
 
-Example encryption : steven >= xyjajs
+## Other Information
+
+* In this application, user data is encrypted with **Caesar encryption algorithm**.
+
+  Encryption Example : steven | xyjajs
 
 > :warning: **Encryption key used: 5**
 
@@ -39,15 +44,12 @@ For Authorities :
 * Disable Account
 * Logout
 
-## Build With
+## Made With
 * C++
-
-## Important
-> :warning: **Data files and source files must be in the same directory.**
 
 ## Contact
 For any problems, you can contact me at the addresses below.
-* Discord : PHOENIX#0001
+* Discord : PHOENIX#7103
 * E-Mail : semihaydn034@gmail.com
 
 ## License
