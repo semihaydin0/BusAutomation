@@ -15,7 +15,7 @@ A little more detailed automation than a normal automation.
 
   Encryption Example : steven | xyjajs
 
-> :warning: **Encryption key used: 5**
+> :warning: **Encryption Key Used : 5**
 
 Login information if you want to login as authorized ;
 
