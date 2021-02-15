@@ -2,6 +2,7 @@
 *** Semih Aydın 2021
 -->
 
+![Codacy Badge](https://app.codacy.com/project/badge/Grade/50a580df2a594f32a5ad88d39eb3879d)
 ## Bus Automation
 A simple bus automation.
 
